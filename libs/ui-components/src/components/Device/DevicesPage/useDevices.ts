@@ -99,6 +99,7 @@ const getDevicesEndpoint = ({
   }
 
   const params = new URLSearchParams();
+  // Always show results in ascending alias order
   params.set('sortColumns', 'alias');
   params.set('sortOrder', 'asc');
   if (fieldSelectors.length > 0) {
