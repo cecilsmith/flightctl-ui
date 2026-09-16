@@ -99,6 +99,8 @@ const getDevicesEndpoint = ({
   }
 
   const params = new URLSearchParams();
+  params.set('sortColumns', 'alias');
+  params.set('sortOrder', 'asc');
   if (fieldSelectors.length > 0) {
     params.set('fieldSelector', fieldSelectors.join(','));
   }
