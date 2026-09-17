@@ -99,9 +99,8 @@ const getDevicesEndpoint = ({
   }
 
   const params = new URLSearchParams();
-  // Always show results in ascending alias order
-  params.set('sortColumns', 'alias');
-  params.set('sortOrder', 'asc');
+  // Device ordering is server-side (alias asc, name as tie-break).
+  // The API has no sort parameter — see flightctl DeviceStore.List.
   if (fieldSelectors.length > 0) {
     params.set('fieldSelector', fieldSelectors.join(','));
   }
